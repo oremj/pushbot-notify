@@ -10,4 +10,4 @@ config.read('/etc/pushbotnotify')
 n = Notifier(config.get('pushbotnotify', 'endpoint'),
              config.get('pushbotnotify', 'api_key'))
 
-n.notify(sys.argv[1:])
+n.notify(''.join(sys.argv[1:]))
