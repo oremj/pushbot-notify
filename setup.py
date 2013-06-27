@@ -5,4 +5,5 @@ setup(
     name='pushbot-notify',
     version='0.0.1',
     packages=['pushbotnotify'],
+    scripts=['scripts/pushbotnotify'],
 )

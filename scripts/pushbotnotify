@@ -1,0 +1,13 @@
+#!/usr/bin/python
+from ConfigParser import SafeConfigParser
+import sys
+from pushbotnotify.notify import Notifier
+
+
+config = SafeConfigParser()
+config.read('/etc/pushbotnotify')
+
+n = Notifier(config.get('pushbotnotify', 'endpoint'),
+             config.get('pushbotnotify', 'api_key'))
+
+n.notify(sys.argv[1:])
